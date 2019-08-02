@@ -1,0 +1,34 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 1 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: upgrade/MNIST Basic save 1.x.ipynb
+--------------------------------------------------------------------------------
+upgrade/MNIST Basic save 1.x.ipynb:54:12: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'upgrade/MNIST Basic save 1.x.ipynb'
+ outputting to 'upgrade/MNIST Basic save 2.0.ipynb'
+--------------------------------------------------------------------------------
+
+14:9: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+16:16: INFO: Changing labels arg of tf.nn.softmax_cross_entropy_with_logits to tf.stop_gradient(labels). Please check this transformation.
+
+17:16: INFO: Added keywords to args of function 'tf.reduce_mean'
+18:12: INFO: Renamed 'tf.train.GradientDescentOptimizer' to 'tf.compat.v1.train.GradientDescentOptimizer'
+20:7: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+21:5: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+34:19: INFO: Added keywords to args of function 'tf.argmax'
+34:34: INFO: Added keywords to args of function 'tf.argmax'
+36:6: INFO: Added keywords to args of function 'tf.reduce_mean'
+46:6: INFO: Added keywords to args of function 'tf.argmax'
+50:6: INFO: Added keywords to args of function 'tf.argmax'
+53:8: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+54:12: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+
